@@ -10,13 +10,12 @@ public class CybrtekApp {
 //        BeanFactory container = new ClassPathXmlApplicationContext("config.xml");
         ApplicationContext container = new ClassPathXmlApplicationContext("config.xml");
 
-//        Mentor mentor = (Mentor) container.getBean("fullTimeMentor");
+//        Class as argument
         Mentor mentor = container.getBean("fullTimeMentor", Mentor.class);
-
+//        Casting the Class
+        Mentor mentor1 = (Mentor) container.getBean("partTimeMentor");
 
         mentor.createAccount();
-
-        Mentor mentor1 = (Mentor) container.getBean("partTimeMentor");
         mentor1.createAccount();
     }
 }

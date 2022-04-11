@@ -10,8 +10,14 @@ public class CybertekApp {
 
         ApplicationContext  container = new AnnotationConfigApplicationContext(CybertekAppConfig.class);
 
-        Course course = container.getBean("java", Course.class);
-        course.getTeachingHours();
+        Course courseJava = container.getBean("java", Course.class);
+        courseJava.getTeachingHours();
+
+        Course courseSelenium = container.getBean("selenium", Course.class);
+        courseSelenium.getTeachingHours();
+
+        System.out.println(courseJava.toString());
+
 
     }
 }

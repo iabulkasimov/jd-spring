@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h2>Welcome to Spring Class!</h2>
+  <h2 th:text="${name}"></h2>
+  <h3 th:text="${course}"></h3>
+  <h2 th:text="${random}"></h2>
+  <h3 th:text="${numbers}"></h3>
+  <h3 th:text="${numbers.get(3)}"></h3>
+  <h2 th:text="${birthday}"></h2>
+
+  <h2 th:text="${'Hello ' + name + '!'}"></h2>
+
+  <h3 th:text="${student.getFirstName()}"></h3>
+  <h3 th:text="${student.firstName}"></h3>
+  <h3 th:text="${student.getLastName()}"></h3>
+  <h3 th:text="${student.lastName}"></h3>
+  <h3 th:text="${student.getId()}"></h3>
+  <h3 th:text="${student.id}"></h3>
+</body>
+</html>

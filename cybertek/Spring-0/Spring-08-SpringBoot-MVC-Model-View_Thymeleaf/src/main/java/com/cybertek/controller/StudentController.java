@@ -30,6 +30,8 @@ public class StudentController {
         numbers.add(2);
         numbers.add(3);
         numbers.add(4);
+        numbers.add(400);
+        numbers.add(455);
         model.addAttribute("numbers", numbers);
 
         LocalDate birthday = LocalDate.now().minusYears(42);
@@ -40,5 +42,10 @@ public class StudentController {
 
 
         return "student/welcome";
+    }
+
+    @GetMapping("/register")
+    public String homwPage(){
+        return "student/register";
     }
 }

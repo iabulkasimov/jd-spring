@@ -19,8 +19,8 @@ public class DataGenerator implements CommandLineRunner {
 
     @Autowired
     EmployeeRepository employeeRepository;
-    @Autowired
-    DepartmentRepository departmentRepository;
+//    @Autowired
+//    DepartmentRepository departmentRepository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -50,13 +50,13 @@ public class DataGenerator implements CommandLineRunner {
 //        Transportation t2 = new Transportation("Van","Jane Black","Medium");
 //        Transportation t3 = new Transportation("Pickup truck","Kate Brown","Standard");
 //        Transportation t4 = new Transportation("Mini truck","John Lee","Small");
-//
-//        e1.setDepartment(d1);
-//        e2.setDepartment(d2);
-//        e3.setDepartment(d3);
-//        e4.setDepartment(d4);
-//        e5.setDepartment(d5);
-//
+
+        e1.setDepartment(d1);
+        e2.setDepartment(d2);
+        e3.setDepartment(d3);
+        e4.setDepartment(d4);
+        e5.setDepartment(d5);
+
 //        e1.setRegion(r1);
 //        e2.setRegion(r2);
 //        e3.setRegion(r3);
@@ -73,7 +73,7 @@ public class DataGenerator implements CommandLineRunner {
         departmentList.addAll(Arrays.asList(d1,d2,d3,d4,d5));
 
         employeeRepository.saveAll(employeeList);
-        departmentRepository.saveAll(departmentList);
+//        departmentRepository.saveAll(departmentList);
 
     }
 }

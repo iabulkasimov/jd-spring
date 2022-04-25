@@ -11,6 +11,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@Table(name = "account_details")
 public class Account extends BaseEntity{
 
     private String name;
@@ -23,13 +24,13 @@ public class Account extends BaseEntity{
     private String postalCode;
 
     @Enumerated(EnumType.STRING)
-    private UserRole userRole = UserRole.USER;
+    private UserRole role = UserRole.USER;
 
     @OneToOne(mappedBy = "account")
     private User user;
 
     public Account(String name, String address, String country, String state, String city,
-                   Integer age, String postalCode, UserRole userRole) {
+                   Integer age, String postalCode, UserRole role) {
         this.name = name;
         this.address = address;
         this.country = country;
@@ -37,6 +38,6 @@ public class Account extends BaseEntity{
         this.city = city;
         this.age = age;
         this.postalCode = postalCode;
-        this.userRole = userRole;
+        this.role = role;
     }
 }

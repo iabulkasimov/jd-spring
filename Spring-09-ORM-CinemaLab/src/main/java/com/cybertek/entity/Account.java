@@ -1,0 +1,30 @@
+package com.cybertek.entity;
+
+import com.cybertek.enums.UserRole;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+public class Account extends BaseEntity{
+
+    private String name;
+    private String address;
+    private String country;
+    private String state;
+    private String city;
+    private Integer age;
+    @Column(name = "postal_code")
+    private String postalCode;
+
+    @Enumerated(EnumType.STRING)
+    private UserRole userRole = UserRole.USER;
+
+    @OneToOne(mappedBy = "account")
+    private User user;
+}

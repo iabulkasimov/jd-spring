@@ -16,6 +16,7 @@ public class Spring07SpringbootIoCDiLabApplication {
         Calculator calculator = container.getBean("calculator", Calculator.class);
 
         System.out.println(calculator.getTotalCarpetCost(City.SAN_ANTONIO));
+
     }
 
 }

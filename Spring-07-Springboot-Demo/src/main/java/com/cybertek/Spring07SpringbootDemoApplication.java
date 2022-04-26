@@ -15,6 +15,7 @@ public class Spring07SpringbootDemoApplication {
         course.getTrainingHours();
 
         System.out.println(course.toString());
+
     }
 
 }

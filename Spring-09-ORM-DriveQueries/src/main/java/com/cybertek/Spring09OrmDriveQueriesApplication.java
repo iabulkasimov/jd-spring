@@ -13,6 +13,8 @@ import com.cybertek.repository.RegionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.event.ApplicationStartedEvent;
+import org.springframework.context.event.EventListener;
 
 import javax.annotation.PostConstruct;
 
@@ -31,8 +33,8 @@ public class Spring09OrmDriveQueriesApplication {
 
     }
 
-    @PostConstruct
-    public void testRegions() {
+    @EventListener
+    public void testRegions(ApplicationStartedEvent event) {
 
         System.out.println("--------Regions start---------");
 
@@ -45,8 +47,8 @@ public class Spring09OrmDriveQueriesApplication {
         System.out.println("-------Regions End----------");
     }
 
-    @PostConstruct
-    public void testDepartments() {
+    @EventListener
+    public void testDepartments(ApplicationStartedEvent event) {
 
         System.out.println("--------Department start---------");
 
@@ -59,8 +61,9 @@ public class Spring09OrmDriveQueriesApplication {
 
     }
 
-    @PostConstruct
-    public void testEmployees(){
+//    @PostConstruct
+    @EventListener
+    public void testEmployees(ApplicationStartedEvent event){
 
         System.out.println("---------Employee start------------");
 

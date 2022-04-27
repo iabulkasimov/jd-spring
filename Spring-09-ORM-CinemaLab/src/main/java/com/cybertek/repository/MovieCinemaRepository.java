@@ -27,7 +27,7 @@ public interface MovieCinemaRepository extends JpaRepository<MovieCinema,Long> {
     List<MovieCinema> findAllByDateTimeAfter(LocalDateTime dateTime);
 
     //Write a derived query to find the top 3 expensive movies
-    List<MovieCinema> findFirst3byOrderByMoviePriceAsc();
+//    List<MovieCinema> findFirst3byOrderByMoviePriceAsc();
 
     //Write a derived query to list all movie cinemas that contain a specific movie name
     List<MovieCinema> findAllByMovieNameContaining(String name);
@@ -48,6 +48,6 @@ public interface MovieCinemaRepository extends JpaRepository<MovieCinema,Long> {
     Integer countByCinemaIdNativeQuery(long cinemaId);
 
     //Write a native query that returns all movie cinemas by location name
-    @Query(value="select *from movie_cinema JOIN cinema c on c.id = movie_cinema.cinema_id JOIN Location ")
+    @Query(value="select * from movie_cinema JOIN cinema c on c.id = movie_cinema.cinema_id JOIN Location ",nativeQuery = true)
     List<MovieCinema>retrieveAllByLocationName(String locationName);
 }

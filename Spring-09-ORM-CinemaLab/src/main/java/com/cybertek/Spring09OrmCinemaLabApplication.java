@@ -30,12 +30,12 @@ public class Spring09OrmCinemaLabApplication {
 
     @EventListener
     public void testAccount(ApplicationStartedEvent event){
-        System.out.println(accountRepository.fetchAdminUsers());
+//        System.out.println(accountRepository.fetchAdminUsers());
         System.out.println(cinemaRepository.distinctBySponsoredName());
         System.out.println(movieCinemaRepository.countAllByCinemaId(4L));
-        System.out.println(movieCinemaRepository.retrieveAllByLocationName("AMC Empire 25"));
+//        System.out.println(movieCinemaRepository.retrieveAllByLocationName("AMC Empire 25"));
         System.out.println(ticketRepository.fetchAllTicketsByUserJPQL(4l));
-        System.out.println(ticketRepository.fetchAllTicketsWithRangeDates(LocalDateTime.now().minusDays(25), LocalDateTime.now()));
+        System.out.println(ticketRepository.fetchAllTicketsWithRangeDates(LocalDateTime.now().minusDays(800), LocalDateTime.now()));
         System.out.println(ticketRepository.retrieveAllBySearchCriteria("it"));
     }
 }

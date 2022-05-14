@@ -51,7 +51,7 @@ public class Address extends BaseEntiry{
         return consumeTemp(this.city);
     }
 
-    public Integer consumeTemp(String sity){
+    public Integer consumeTemp(String city){
         return 5;
     }
 

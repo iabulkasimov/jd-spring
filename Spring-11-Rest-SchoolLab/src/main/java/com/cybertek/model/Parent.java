@@ -22,7 +22,7 @@ import java.time.LocalDate;
 public class Parent extends BaseEntiry{
 
     private String firstName;
-    private String lastNamw;
+    private String lastName;
     private String email;
     private String username;
 

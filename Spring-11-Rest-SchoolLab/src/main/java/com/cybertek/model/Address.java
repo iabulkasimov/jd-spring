@@ -49,9 +49,9 @@ public class Address extends BaseEntiry{
 
     private Integer consumeTemp;
 
-    private Integer getCurrentTemperature(){
-        return consumeTemp(this.city);
-    }
+//    private Integer getCurrentTemperature(){
+//        return consumeTemp(this.city);
+//    }
 
     public Integer consumeTemp(String city){
 

@@ -35,7 +35,7 @@ public class UserService {
     public User createUser(User user) throws ServiceException {
 
         User foundUserByEmail = readByEmail(user.getEmail());
-        User foundUserByUsername = readByUsername(user.getUserName());
+        User foundUserByUsername = readByUsername(user.getUsername());
         if(foundUserByEmail != null) {
             throw new ServiceException("This user already exists, please change your email");
         }

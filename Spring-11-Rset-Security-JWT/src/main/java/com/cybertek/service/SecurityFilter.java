@@ -20,6 +20,7 @@ import java.io.IOException;
     public class SecurityFilter extends OncePerRequestFilter {
         private final JWTUtil jwtUtil;
         private final SecurityService securityService;
+
         public SecurityFilter(JWTUtil jwtUtil, SecurityService securityService) {
             this.jwtUtil = jwtUtil;
             this.securityService = securityService;

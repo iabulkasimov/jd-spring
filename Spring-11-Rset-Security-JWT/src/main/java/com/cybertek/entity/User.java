@@ -22,7 +22,7 @@ public class User extends BaseEntity{
     private String email;
 
     @Column(nullable = false,unique = true)
-    private String userName;
+    private String username;
 
     @Column(nullable = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
